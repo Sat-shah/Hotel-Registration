@@ -60,7 +60,7 @@
             var Days = document.getElementById("txtDays").value;
             var Person = document.getElementById("txtPerson").value;
             var totalDay = 0;
-            if(Days > 2){
+            if(Days >= 1){
                 totalDay = (Days - 2);
                 roomcost += roomcost + (roomcost * totalDay);
             }
@@ -68,7 +68,7 @@
             var PersonNo = 0;
             if(Person > 2){
                 PersonNo = (Person - 2);
-                roomcost += roomcost + (1000 * PersonNo);
+                roomcost += (1000 * PersonNo);
             }
             total = roomcost;
             
@@ -76,7 +76,7 @@
             total = total - advance;
             
             document.getElementById("lblAdvance").innerHTML = advance;
-            document.getElementById("lblBalance").innerHTML = `&#8377;${total}`;
+            document.getElementById("lblBalance").innerHTML = `<b>&#8377;${total}</b>`;
 
         }
     </script>
